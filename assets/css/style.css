@@ -1,0 +1,373 @@
+/* Basic setup starts*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+p {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 2px 0 -20px 0 !important;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.block {
+    margin: 12% 5%;
+    text-align: center;
+}
+
+.w3-btn,
+.w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.w3-button:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+}
+
+.tut-button {
+    background-color: #04aa6d;
+    color: white;
+    font-size: 18px;
+    margin: auto;
+    display: block;
+    width: 200px;
+    border-radius: 25px;
+}
+
+.ref-button {
+    background-color: white;
+    font-size: 18px;
+    margin: auto;
+    display: block;
+    width: 200px;
+    border-radius: 25px;
+    color: #000;
+}
+
+.ref-button:hover {
+    background-color: #e7e9eb !important;
+    color: black;
+}
+
+.tryit-button {
+    background-color: #04aa6d;
+    color: white;
+    border-radius: 25px;
+    font-size: 18px;
+    width: 200px;
+}
+
+.tut-button:hover,
+.tryit-button:hover,
+.exercise-button:hover,
+#getdiploma a:hover {
+    background-color: #059862 !important;
+    color: white !important;
+}
+
+
+/* Basic setup end*/
+
+
+/* Reusable component starts */
+
+.btn-primary {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    background: #059862 !important;
+    height: 100%;
+    border-color: #059862 !important;
+    z-index: -1;
+    transition: .4s all ease-in-out;
+    left: 0;
+    top: 0;
+}
+
+.btn-primary:hover {
+    border-color: #059862 !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover::after {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.ptb-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.pb-70 {
+    padding-bottom: 70px;
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1250px;
+    }
+}
+
+.gray-bg {
+    background-color: #f9fafb;
+}
+
+
+/* Reusable component ends */
+
+
+/* Header starts here */
+
+.header-nav {
+    background-color: #ffffff;
+}
+
+.nav-link {
+    color: #111111 !important;
+    font-weight: 500;
+}
+
+.header-link {
+    padding: 27px 16px !important;
+}
+
+.fa-angle-down {
+    position: relative;
+    top: 2px;
+}
+
+
+/* dropdown nav starts*/
+
+.dropdown1 {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    top: 78px;
+    width: 100%;
+    background-color: rgb(40, 42, 53);
+    padding-left: 0;
+    padding-top: 40px;
+    overflow-y: scroll;
+    z-index: 5;
+    height: 100vh;
+    right: 0;
+    padding-bottom: 100px;
+}
+
+ul.primary-menu li:hover ul.dropdown1 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown1 .dropdown-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.dropdown1-inner {
+    max-width: 1100px;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-inner ul li a {
+    padding: 2px 0 2px 6px !important;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    margin: 4px 0;
+}
+
+.dropdown-inner ul li a:hover {
+    color: #000 !important;
+    background-color: #ccc !important;
+}
+
+.dropdown-title {
+    color: #fff4a3;
+    font-size: 32px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.dropdown-inner .list-tittle {
+    color: #fff4a3;
+    font-size: 24px;
+    padding-left: 6px;
+    margin-top: 16px;
+}
+
+.dropdown1 .dropdown-inner ul.list {
+    padding-left: 0;
+}
+
+
+/* dropdown nav end*/
+
+
+/* Navbar nav starts*/
+
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar-brand img {
+    width: 77px;
+    height: auto;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+ul.primary-menu li a {
+    transition: .3s all ease-in-out;
+}
+
+ul.primary-menu li a:hover {
+    color: #fff;
+    background: #04aa6d;
+}
+
+ul.primary-menu li ul li a {
+    transition: .3s all ease-in-out;
+}
+
+ul.primary-menu li ul li a:focus,
+ul.primary-menu li ul li a:hover {
+    letter-spacing: 1px;
+}
+
+
+/* Navbar nav ends*/
+
+.header-icon {
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: 8px;
+}
+
+ul.header-icon li {
+    padding: 8px 16px;
+    font-size: 18px;
+}
+
+ul.header-icon li a {
+    color: #111;
+    transition: .2s ease-in-out;
+}
+
+ul.header-icon li a:hover {
+    color: #059862;
+}
+
+.header-btn .btn-primary {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.header-btn .btn-1 {
+    width: 140px;
+    margin-right: 15px;
+    border-radius: 27px;
+    padding: 8px 16px;
+    background: #fff !important;
+    border-color: #fff;
+    color: black;
+}
+
+.header-btn .btn-2 {
+    width: 130px;
+    border-radius: 25px;
+    background-color: #04aa6d;
+    padding: 8px 16px;
+    line-height: 1.5;
+    color: white;
+}
+
+
+/* Header ends here */
+
+
+/* Main content starts */
+
+#main {
+    background-color: #282a35;
+    color: white;
+    height: 95vh;
+}
+
+.right-inner {
+    background: #e7e9eb;
+    padding: 16px;
+    border-radius: 5px;
+    color: black;
+    text-align: left;
+}
+
+.right-inner h3 {
+    font-size: 24px;
+    font-weight: 501;
+    margin: 10px 0;
+    text-align: left;
+    color: black;
+}
+
+.editor-box {
+    background: #fff;
+    width: 100%;
+    height: 240px;
+    border-left: 4px solid #04aa6d;
+    margin: 16px 0;
+    padding: 8px 12px;
+}
+
+
+/* Main content ends */
